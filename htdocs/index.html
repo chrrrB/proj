@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <title>Angular with Spring</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+	<script Language="JavaScript" src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="FoodController">
+	<h1> Soon to be E-Commerce Site</h1>
+
+	<div>
+		{{error}}
+	
+	</div>
+    <div>
+      {{message}}
+    </div>
+	
+	<div>
+		<ul>
+		  <li ng-repeat="food in foods">
+			<a href="/food/{{food.foodId}}">{{food.foodName}}</a>
+		  </li>
+		</ul>
+	
+	</div>
+
+	<div ng-view></div>
+  </body>
+</html>
